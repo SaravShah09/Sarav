@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote of the Day</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* Add styles for the message box */
+        #message {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #c5e0f4;
+            color: #0c0c0c;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            z-index: 1000;
+            display: none; /* Hidden by default */
+            opacity: 0; /* Invisible by default */
+            transition: opacity 0.5s;
+        }
+    </style>
+</head>
+<body class="dark-theme-1">
+    <header>
+        <h1>Quote of the Day</h1>
+        <div class="header-controls">
+            <button id="toggle-theme">Toggle Theme</button>
+            <a href="/favorites" id="favorites-button">My Favorites</a>
+        </div>
+    </header>
+    <main>
+        <section class="quote-section">
+            <button id="get-random-quote">Get Today's Quote</button>
+            <div id="random-quote-display" class="quote-display"></div>
+        </section>
+        <section class="search-section">
+            <input type="text" id="author-name" placeholder="Search by author">
+            <div id="suggestions" class="suggestions-list"></div>
+        </section>
+    </main>
+    <div id="message"></div> <!-- Message display element -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

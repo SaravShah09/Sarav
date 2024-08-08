@@ -1,0 +1,235 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+   
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+header a, header button {
+    color: #fff;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em; /* Increased font size */
+    transition: color 0.3s, transform 0.3s;
+}
+
+header a:hover, header button:hover {
+    color: #8a2be2; /* Violet color on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    transition: transform 0.3s;
+}
+
+button {
+    background-color: #8a2be2;
+    color: #fff;
+    border: none;
+    padding: 12px 24px; /* Increased padding */
+    cursor: pointer;
+    margin: 10px 0;
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-size: 1em; /* Adjust font size */
+}
+
+button:hover {
+    background-color: #5d15a3;
+    transform: translateY(-3px); /* Animation for button hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+input[type="text"] {
+    padding: 12px;
+    width: 80%; /* Increased width to extend the search bar */
+    max-width: 600px; /* Optional: Adjust max-width if needed */
+    margin: 10px 0;
+    border: 2px solid #8a2be2;
+    border-radius: 8px; /* Rounded corners */
+    transition: border-color 0.3s, transform 0.3s;
+    font-size: 1.1em; /* Increased font size */
+}
+
+input[type="text"]:focus {
+    border-color: #5d15a3;
+    outline: none;
+    transform: scale(1.05); /* Scale up on focus */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on focus */
+}
+
+.quote-display, .suggestions-list {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    text-align: center; /* Center text in the boxes */
+}
+
+.quote-display:hover, .suggestions-list:hover {
+    transform: translateY(-3px); /* Lift up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.quote-display blockquote {
+    font-size: 1.5em; /* Increased font size for quotes */
+    font-weight: bold; /* Bold font for quotes */
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.quote-display footer {
+    font-size: 1.2em; /* Increased font size for authors */
+    font-style: italic; /* Italicize author names */
+    color: #555; /* Different color for authors */
+    transition: color 0.3s;
+}
+
+.suggestion-item, .quote-card {
+    cursor: pointer;
+    padding: 20px;
+    margin: 10px 0;
+    border: 2px solid #8a2be2;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    text-align: center; /* Center text in the cards */
+}
+
+.suggestion-item:hover, .quote-card:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05); /* Add scale animation on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Dark Themes */
+.dark-theme-1 {
+    background-color: #121212;
+    color: #e0e0e0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-theme-2 {
+    background-color: #81a9fa;
+    color: #f5f5f5;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-theme-1 .quote-display, .dark-theme-1 .suggestions-list,
+.dark-theme-2 .quote-display, .dark-theme-2 .suggestions-list {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-theme-1 .suggestion-item, .dark-theme-1 .quote-card,
+.dark-theme-2 .suggestion-item, .dark-theme-2 .quote-card {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 2px solid #8a2be2;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.dark-theme-1 .suggestion-item:hover, .dark-theme-1 .quote-card:hover,
+.dark-theme-2 .suggestion-item:hover, .dark-theme-2 .quote-card:hover {
+    background-color: #f27296;
+    transform: scale(1.05); /* Add scale animation on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Light Theme */
+.light-theme-1 {
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.light-theme-1 .quote-display, .light-theme-1 .suggestions-list {
+    background-color: #e42020;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.light-theme-1 .suggestion-item, .light-theme-1 .quote-card {
+    background-color: #f9f9f9;
+    color: #333;
+    border: 2px solid #8a2be2;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.light-theme-1 .suggestion-item:hover, .light-theme-1 .quote-card:hover {
+    background-color: #e0e0e0;
+    transform: scale(0.5); /* Add scale animation on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+#message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f8d7da;
+    color: #721c24;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Increased gap */
+    transition: gap 0.3s;
+}
+
+.header-controls button {
+    font-size: 1.2em; /* Increased font size for buttons */
+    transition: color 0.3s, transform 0.3s;
+}
+
+.header-controls a {
+    font-size: 1.2em; /* Increased font size for link */
+    transition: color 0.3s, transform 0.3s;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-controls {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 600px) {
+    input[type="text"] {
+        width: 90%; /* Wider on small screens */
+    }
+}
